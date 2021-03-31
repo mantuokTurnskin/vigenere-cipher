@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigenere cipher</title>
+    <link rel="shortcut icon" href="asserts/title-ico.png" type="image/png">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light-theme.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__items">
+                <div class="header__title">
+                    <h1>Vigenere cipher</h1>
+                </div>
+                <div class="header__themes-switcher">
+                    <button class="theme-btn theme-btn_active">Light theme</button>
+                    <button class="theme-btn theme-btn_active">Dark theme</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="main__settings">
+                <div class="main__settings-item">
+                    <fieldset>
+                        <legend>
+                            Select curent language
+                        </legend>
+                        <div class="settings__items">
+                            <p class="settings__item"><input name="lang" type="radio" value="eng" checked>Eng</p>
+                            <p class="settings__item"><input name="lang" type="radio" value="ru">Ru</p>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="main__settings-item">
+                    <fieldset>
+                        <legend>
+                            Reverse
+                        </legend>
+                        <div class="settings__items">
+                            <p class="settings__item"><input name="reverse" type="radio" value="no" checked>No</p>
+                            <p class="settings__item"><input name="reverse" type="radio" value="yes">Yes</p>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <section class="main__content">
+                <div class="main__content-item">
+                    <textarea class="main__content-area" name="source" id="source"></textarea>
+                    <div class="main__content-btns">
+                        <button class="main__content-btn">Copy</button>
+                        <button class="main__content-btn">Paste</button>
+                    </div>
+                </div>
+                <div class="main__content-item main__content-cryptooperations">
+                    <button class="main__content-btn">Encrypt</button>
+
+                    <button class="main__content-btn">Decrypt</button>
+
+                </div>
+                <div class="main__content-item">
+                    <textarea class="main__content-area" name="result" id="result"></textarea>
+                    <div class="main__content-btns">
+                        <button class="main__content-btn">Copy</button>
+                        <button class="main__content-btn">Paste</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__items">
+                <div class="footer__item">
+                    <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher" title="Vigenere cipher wiki"> 
+                        <img class="footer__link" src="asserts/wiki-icon.png" alt="Go to wiki"></a>
+                </div>
+                <div class="footer__item">
+                    <a href="https://github.com/mantuokTurnskin/vigenere-cipher" title="Vigenere cipher repo">
+                    <img class="footer__link" src="asserts/gh-icon.png" alt="Go to github"></a>
+                </div>
+                <div class="footer__item">
+                    <a href="https://t.me/mantuok" title="send me a message">
+                    <img class="footer__link" src="asserts/tlg-icon.png" alt="Send me in telegram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
