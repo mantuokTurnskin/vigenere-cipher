@@ -5,6 +5,7 @@ body {
 
 h1,
 p {
+    margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -20,9 +21,22 @@ p {
 }
 
 .header__items {
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.theme-btn + .theme-btn{
+    margin-left: 20px;
+}
+.theme-btn{
+    transition: 0.2s linear;
+}
+.theme-btn:hover{
+    transform: scale(1.2);
+}
+.theme-btn_active{
+    transform: scale(1.2);
 }
 
 .main {
@@ -37,7 +51,8 @@ p {
     justify-content: space-around;
     align-items: center;
 }
-.main__settings-item + .main__settings-item {
+
+.main__settings-item+.main__settings-item {
     margin-left: 5px;
 }
 
@@ -46,13 +61,16 @@ p {
     justify-content: space-between;
     align-items: center;
 }
-.settings__item{
+
+.settings__item {
     margin: 5px;
 }
-.settings__item + .settings__item {
+
+.settings__item+.settings__item {
     padding-left: 10px;
 }
-input{
+
+input {
     margin-right: 5px;
 }
 
@@ -81,18 +99,53 @@ input{
     height: inherit;
 }
 
-.main__content-item{
+.main__content-cryptooperations {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main__content-btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 32px;
+    transition: 0.2s linear;
+}
+.main__content-btn:hover{
+    transform: scale(1.2);
+}
+
+.content-btn__icon {
+    width: 20px;
+    height: 20px;
+    margin: 3px 0;
+}
+.content-btn__icon_right{
+    margin-left: 10px;
+}
+.content-btn__icon_left{
+    margin-right: 10px;
+    transform: scale(-1, 1);
+}
+
+
+.main__content-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.main__content-btns{
-    margin-top: -22px;
+.main__content-btns {
     width: 50%;
     display: flex;
     justify-content: space-around;
+}
+
+.textarea-btns {
+    margin-top: -22px;
 }
 
 .footer {
@@ -109,15 +162,18 @@ input{
     justify-content: flex-end;
     align-items: center;
 }
-.footer__item{
+
+.footer__item {
     margin-right: 25px;
 }
-.footer__link{
+
+.footer__link {
     width: 30px;
     height: 30px;
-    transition: 0.2s linear ;
+    transition: 0.2s linear;
 }
+
 .footer__link:hover,
 .footer__link:active {
-    transform: scale(1.5, 1.5); 
+    transform: scale(1.5, 1.5);
 }

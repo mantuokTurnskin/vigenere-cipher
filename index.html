@@ -22,7 +22,7 @@
                 </div>
                 <div class="header__themes-switcher">
                     <button class="theme-btn theme-btn_active">Light theme</button>
-                    <button class="theme-btn theme-btn_active">Dark theme</button>
+                    <button class="theme-btn ">Dark theme</button>
                 </div>
             </div>
         </div>
@@ -58,21 +58,27 @@
 
             <section class="main__content">
                 <div class="main__content-item">
-                    <textarea class="main__content-area" name="source" id="source"></textarea>
-                    <div class="main__content-btns">
+                    <textarea class="main__content-area" name="source" id="source" placeholder="Insert the text for encryption"></textarea>
+                    <div class="main__content-btns textarea-btns">
                         <button class="main__content-btn">Copy</button>
                         <button class="main__content-btn">Paste</button>
                     </div>
                 </div>
-                <div class="main__content-item main__content-cryptooperations">
-                    <button class="main__content-btn">Encrypt</button>
+                <div class="main__content-cryptooperations">
+                    <button class="main__content-btn">
+                        <p class="content-btn__text">Encrypt</p>
+                        <img class="content-btn__icon content-btn__icon_right" src="asserts/arrow-icon.png" alt="Encrypt">
+                    </button>
 
-                    <button class="main__content-btn">Decrypt</button>
+                    <button class="main__content-btn">
+                        <img class="content-btn__icon content-btn__icon_left" src="asserts/arrow-icon.png" alt="Decrypt">
+                        <p class="content-btn__text">Decrypt</p>
+                    </button>
 
                 </div>
                 <div class="main__content-item">
-                    <textarea class="main__content-area" name="result" id="result"></textarea>
-                    <div class="main__content-btns">
+                    <textarea class="main__content-area" name="result" id="result" placeholder="Insert the text for decryption"></textarea>
+                    <div class="main__content-btns textarea-btns">
                         <button class="main__content-btn">Copy</button>
                         <button class="main__content-btn">Paste</button>
                     </div>
