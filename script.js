@@ -4,6 +4,7 @@ class VigenereCipheringMachine {
   }
 
   encrypt(str, cipher) {
+    if(cipher === '') return str.toUpperCase();
     str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
     cipher = cipher.toUpperCase().repeat(Math.ceil(str.length / cipher.length)).slice(0, str.length).split('').map(elem => elem.charCodeAt());
     let result = [];
@@ -19,6 +20,7 @@ class VigenereCipheringMachine {
   }
 
   decrypt(str, cipher) {
+    if(cipher === '') return str.toUpperCase();
     str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
     cipher = cipher.toUpperCase().repeat(Math.ceil(str.length / cipher.length)).slice(0, str.length).split('').map(elem => elem.charCodeAt());
     let result = [];
