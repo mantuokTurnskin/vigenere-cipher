@@ -1,12 +1,24 @@
 header,
 footer {
-    background-color: #48495E;
+    background-color: #9d9fc0;
 }
 
 main{
     background-color: #fafafa;
 }
 
-h1{
-    color: #fafafa;
+h1,
+p,
+textarea
+input,
+legend{
+    color: black;
+}
+
+.cipher-key{
+    background-color: #fff;
+}
+.cipher-key::placeholder,
+.main__content-area::placeholder {
+    color: #dfdddf;
 }
