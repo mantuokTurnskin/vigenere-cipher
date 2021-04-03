@@ -1,0 +1,33 @@
+header,
+footer {
+    background-color: #48495E;
+}
+
+main,
+body{
+    background-color: #312d35;
+}
+
+h1,
+p,
+textarea,
+input,
+legend,
+button{
+    color: #fafafa;
+}
+textarea::placeholder{
+    color: grey;
+}
+button{
+    background-color: #48495E;
+}
+
+
+.cipher-key{
+    background-color: #48495E;
+}
+.cipher-key::placeholder,
+.main__content-area::placeholder {
+    color: #312d35;
+}

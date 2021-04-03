@@ -77,6 +77,27 @@ p {
 .settings__item+.settings__item {
     padding-left: 10px;
 }
+.setting__slider {
+    height: 18px;
+    width: 40px;
+    border: 1px solid grey;
+    border-radius: 9px;
+}
+.slider__check {
+    height: 16px;
+    width: 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #7f48ff;
+}
+.slider__check_off {
+    margin-left: 1px;
+    transition: 0.2s linear;
+}
+.slider__check_on{
+    margin-left: 21px;
+    transition: 0.2s linear;
+}
 
 input {
     margin-right: 5px;
@@ -87,11 +108,6 @@ input {
     margin-bottom: 5px;
     border-radius: 8px;
     border: 1px solid transparent;
-}
-
-.cipher-key::placeholder,
-.main__content-area::placeholder {
-    color: #dfdddf;
 }
 
 .cipher-key:focus,
@@ -110,6 +126,14 @@ input {
     flex-wrap: wrap;
 }
 
+textarea{
+    background-color: transparent;
+    padding: 5px;
+}
+button:focus,
+textarea:focus{
+    outline: none;
+}
 .main__content-area {
 
     width: 500px;

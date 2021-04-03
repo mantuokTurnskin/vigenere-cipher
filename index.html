@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="asserts/title-ico.png" type="image/png">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="light-theme.css">
+    <link id="head-theme" rel="stylesheet" href="light-theme.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
                     <h1>Vigenere cipher</h1>
                 </div>
                 <div class="header__themes-switcher">
-                    <button class="theme-btn theme-btn_active">Light theme</button>
-                    <button class="theme-btn ">Dark theme</button>
+                    <button id="light-theme" class="theme-btn theme-btn_active">Light theme</button>
+                    <button id="dark-theme" class="theme-btn">Dark theme</button>
                 </div>
             </div>
         </div>
@@ -34,11 +34,16 @@
                 <div class="main__settings-item">
                     <fieldset>
                         <legend>
-                            Select curent language
+                            Encrypt language
                         </legend>
                         <div class="settings__items">
-                            <p class="settings__item"><input name="lang" type="radio" value="eng" checked>Eng</p>
-                            <p class="settings__item"><input name="lang" type="radio" value="ru">Ru</p>
+                            <div class="settings__items">
+                                <p class="settings__item">Eng</p>
+                                <div class="setting__slider" id="slider-lang">
+                                    <div class="slider__check slider__check_off"></div>
+                                </div>
+                                <p class="settings__item">Ru</p>
+                            </div>
                         </div>
                     </fieldset>
                 </div>
@@ -49,8 +54,11 @@
                             Reverse
                         </legend>
                         <div class="settings__items">
-                            <p class="settings__item"><input name="reverse" type="radio" value="no" checked>No</p>
-                            <p class="settings__item"><input name="reverse" type="radio" value="yes">Yes</p>
+                            <p class="settings__item">No</p>
+                            <div class="setting__slider" id="slider-reverse">
+                                <div class="slider__check slider__check_off"></div>
+                            </div>
+                            <p class="settings__item">Yes</p>
                         </div>
                     </fieldset>
                 </div>
@@ -70,8 +78,8 @@
                 <div class="main__content-item">
                     <textarea class="main__content-area" name="source" id="source" placeholder="Insert the text for encryption"></textarea>
                     <div class="main__content-btns textarea-btns">
-                        <button class="main__content-btn">Copy</button>
-                        <button class="main__content-btn">Paste</button>
+                        <button id="source-copy" class="main__content-btn">Copy</button>
+                        <button id="source-paste" class="main__content-btn">Paste</button>
                     </div>
                 </div>
                 <div class="main__content-cryptooperations">
@@ -89,8 +97,8 @@
                 <div class="main__content-item">
                     <textarea class="main__content-area" name="result" id="result" placeholder="Insert the text for decryption"></textarea>
                     <div class="main__content-btns textarea-btns">
-                        <button class="main__content-btn">Copy</button>
-                        <button class="main__content-btn">Paste</button>
+                        <button id="result-copy" class="main__content-btn">Copy</button>
+                        <button id="result-paste" class="main__content-btn">Paste</button>
                     </div>
                 </div>
             </section>
