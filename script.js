@@ -43,7 +43,6 @@ class paramCollection {
     this.cipher = document.querySelector('#cipher');
     this.source = document.querySelector('#source');
     this.result = document.querySelector('#result');
-    this.isReverse = document.querySelector('input[name="reverse"]').value === 'no';
   }
 }
 const encrypt = document.querySelector('#encrypt');
