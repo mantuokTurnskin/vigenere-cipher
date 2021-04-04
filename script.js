@@ -5,14 +5,14 @@ class VigenereCipheringMachine {
   }
 
   encrypt(str, cipher) {
-    if (cipher === '') return str.toUpperCase();
-    str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
-    if(language === 'eng'){
+    if (language === 'eng') {
       cipher = cipher.toUpperCase().split('').filter(elem => (elem.charCodeAt() >= 65 && elem.charCodeAt() <= 90)).join('');
     }
-    else{
+    else {
       cipher = cipher.toUpperCase().split('').filter(elem => (elem.charCodeAt() >= 1040 && elem.charCodeAt() <= 1071)).join('');
     }
+    if (cipher === '') return str.toUpperCase();
+    str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
     cipher = cipher.repeat(Math.ceil(str.length / cipher.length)).slice(0, str.length).split('').map(elem => elem.charCodeAt());
     let result = [];
     let count = 0;
@@ -36,14 +36,15 @@ class VigenereCipheringMachine {
   }
 
   decrypt(str, cipher) {
-    if (cipher === '') return str.toUpperCase();
-    str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
-    if(language === 'eng'){
+    if (language === 'eng') {
       cipher = cipher.toUpperCase().split('').filter(elem => (elem.charCodeAt() >= 65 && elem.charCodeAt() <= 90)).join('');
     }
-    else{
+    else {
       cipher = cipher.toUpperCase().split('').filter(elem => (elem.charCodeAt() >= 1040 && elem.charCodeAt() <= 1071)).join('');
     }
+    if (cipher === '') return str.toUpperCase();
+    str = str.toUpperCase().split('').map(elem => elem.charCodeAt());
+    str = (!this.reverse) ? str : str.reverse();
     cipher = cipher.toUpperCase().repeat(Math.ceil(str.length / cipher.length)).slice(0, str.length).split('').map(elem => elem.charCodeAt());
     let result = [];
     let count = 0;
@@ -63,10 +64,9 @@ class VigenereCipheringMachine {
         } else result.push(1040 + (elem + 31 - cipher[index - count]) % 31);
       });
     }
-    return (!this.reverse) ? result.map(elem => String.fromCharCode(elem)).join('') : result.map(elem => String.fromCharCode(elem)).reverse().join('');
+    return result.map(elem => String.fromCharCode(elem)).join('');
   }
 }
-
 // события изменения темы
 const styleFile = document.querySelector('#head-theme')
 const lightTheme = document.querySelector('#light-theme');
@@ -108,7 +108,7 @@ statusLang.classList.forEach(elem => {
   if (elem === 'slider__check_on') language = 'ru';
 });
 sliderLang.addEventListener('click', () => {
-  language = (language === 'eng')? 'ru' : 'eng';
+  language = (language === 'eng') ? 'ru' : 'eng';
   if (language === 'ru') {
     statusLang.classList.remove('slider__check_off');
     statusLang.classList.add('slider__check_on')
