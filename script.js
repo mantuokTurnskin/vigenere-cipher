@@ -154,7 +154,14 @@ const copyToClipboard = (textarea) => {
   document.execCommand('copy');
 }
 
-source.addEventListener('click', () => {
-  
-  document.execCommand('copy', false);
+sourceCopy.addEventListener('click', () => {
+  source.focus();
+  source.select();
+  document.execCommand('copy');
+});
+
+resultCopy.addEventListener('click', () => {
+  result.focus();
+  result.select();
+  document.execCommand('copy');
 });
