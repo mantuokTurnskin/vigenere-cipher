@@ -149,11 +149,6 @@ const result = document.querySelector('#result');
 const resultCopy = document.querySelector('#result-copy');
 const resultPaste = document.querySelector('#result-paste');
 
-const copyToClipboard = (textarea) => {
-  textarea.select(); 
-  document.execCommand('copy');
-}
-
 sourceCopy.addEventListener('click', () => {
   source.focus();
   source.select();

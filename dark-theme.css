@@ -1,5 +1,6 @@
-header,
-footer {
+header .wrapper,
+footer .wrapper {
+    width: inherit;
     background-color: #48495E;
 }
 

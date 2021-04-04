@@ -1,8 +1,10 @@
-header,
-footer {
+header .wrapper,
+footer .wrapper {
+    width: inherit;
     background-color: #9d9fc0;
 }
 
+body,
 main{
     background-color: #fafafa;
 }
